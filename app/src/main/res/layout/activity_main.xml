@@ -17,6 +17,10 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:src="@drawable/docar_logo"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
 
     </android.support.design.widget.AppBarLayout>
 

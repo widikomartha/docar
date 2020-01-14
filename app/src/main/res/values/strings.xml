@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DoCar</string>
+    <string name="app_name"></string>
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Setting</string>
 
