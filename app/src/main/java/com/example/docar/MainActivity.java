@@ -1,20 +1,23 @@
 package com.example.docar;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.docar.Tab.MyAdapter;
-import com.example.docar.Tab.SlidingTabLayout;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-
-    private SlidingTabLayout mSlidingTabLayout;
-    private ViewPager mViewPager;
+    ArrayList<MenuLayout>arrayList;
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    AdapterRecyclerGrid adapterRecyclerGrid;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +27,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mViewPager=(ViewPager)findViewById(R.id.vp_tabs);
-        mViewPager.setAdapter(new MyAdapter(getSupportFragmentManager(), this));
-
-        mSlidingTabLayout=(SlidingTabLayout)findViewById(R.id.stl_tabs);
-        mSlidingTabLayout.setDistributeEvenly(true);
-        mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.colorAccent));
-        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
-        mSlidingTabLayout.setViewPager(mViewPager);
+        gridList();
+        recyclerView=findViewById(R.id.recyclerview_grid);
+        layoutManager=new GridLayoutManager(this,3);
+        recyclerView.setLayoutManager(layoutManager);
+        adapterRecyclerGrid=new AdapterRecyclerGrid(this,arrayList);
+        recyclerView.setAdapter(adapterRecyclerGrid);
 
     }
 
@@ -50,15 +50,18 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
 
 
+    private void gridList(){
+        arrayList=new ArrayList<>();
+        arrayList.add(new MenuLayout("Car Only", R.drawable.car) );
+        arrayList.add(new MenuLayout("Car+Driver", R.drawable.car_driver) );
+        arrayList.add(new MenuLayout( "Airport Transfer", R.drawable.airport) );
+
+    }
 
 
 }
