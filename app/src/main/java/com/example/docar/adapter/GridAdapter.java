@@ -1,4 +1,4 @@
-package com.kampuskoding.kampuskoding.adapter;
+package com.example.docar.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kampuskoding.kampuskoding.R;
+import com.example.docar.R;
 
 import java.util.ArrayList;
 import java.util.List;

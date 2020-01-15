@@ -1,7 +1,5 @@
-package com.kampuskoding.kampuskoding.fragment;
+package com.example.docar.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
@@ -9,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kampuskoding.kampuskoding.R;
+import com.example.docar.R;
 
 
 public class HomeFragment extends Fragment {

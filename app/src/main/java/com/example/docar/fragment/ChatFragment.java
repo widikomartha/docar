@@ -1,4 +1,4 @@
-package com.kampuskoding.kampuskoding.fragment;
+package com.example.docar.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kampuskoding.kampuskoding.R;
-import com.kampuskoding.kampuskoding.adapter.CustomAdapter;
+import com.example.docar.R;
+import com.example.docar.adapter.CustomAdapter;
 
 /**
  * Created by Ujang Wahyu on 24/01/2017.
@@ -36,8 +36,8 @@ public class ChatFragment extends Fragment {
     protected int[] mDataset3;
 
     int [] icon = {R.drawable.icon, R.drawable.icon,R.drawable.icon};
-    String [] judul = {"Kampus Koding","Kampus Koding","Kampus Koding"};
-    String [] deskripsi = {"belajar programming","belajar programming","belajar programming"};
+    String[] judul = {"Kampus Koding","Kampus Koding","Kampus Koding"};
+    String[] deskripsi = {"belajar programming","belajar programming","belajar programming"};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

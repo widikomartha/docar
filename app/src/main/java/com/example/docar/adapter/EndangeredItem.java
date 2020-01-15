@@ -1,4 +1,4 @@
-package com.kampuskoding.kampuskoding.adapter;
+package com.example.docar.adapter;
 
 /**
  * Created by Ujang Wahyu on 24/01/2017.

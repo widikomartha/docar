@@ -1,4 +1,4 @@
-package com.kampuskoding.kampuskoding.fragment;
+package com.example.docar.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kampuskoding.kampuskoding.R;
-import com.kampuskoding.kampuskoding.TambahTemanActivity;
+import com.example.docar.R;
+import com.example.docar.TambahTemanActivity;
 
 /**
  * Created by Ujang Wahyu on 24/01/2017.

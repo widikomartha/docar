@@ -1,4 +1,4 @@
-package com.kampuskoding.kampuskoding.adapter;
+package com.example.docar.adapter;
 
 /**
  * Created by Ujang Wahyu on 24/01/2017.
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.kampuskoding.kampuskoding.R;
+import com.example.docar.R;
 
 /**
  * Provide views to RecyclerView with data from mDataSet.
@@ -62,7 +62,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
      *
      * @param dataSet String[] containing the data to populate views to be used by RecyclerView.
      */
-    public CustomAdapter(String[] dataSet,String[] dataSet2, int[] dataSet3) {
+    public CustomAdapter(String[] dataSet, String[] dataSet2, int[] dataSet3) {
         this.mDataSet = dataSet;
         this.mDataSet2 = dataSet2;
         this.mDataSet3 = dataSet3;
