@@ -1,5 +1,10 @@
 package com.example.docar.Tab;
 
+/**
+ * Created by Ujang Wahyu on 24/01/2017.
+ */
+
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;

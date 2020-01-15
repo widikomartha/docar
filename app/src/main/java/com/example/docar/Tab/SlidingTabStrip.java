@@ -1,7 +1,5 @@
 package com.example.docar.Tab;
 
-package com.kampuskoding.kampuskoding.Tab;
-
 /**
  * Created by Ujang Wahyu on 24/01/2017.
  */

@@ -1,5 +1,10 @@
 package com.example.docar.Tab;
 
+/**
+ * Created by Ujang Wahyu on 24/01/2017.
+ */
+
+
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,15 +16,19 @@ import android.text.Spanned;
 import android.text.style.ImageSpan;
 
 import com.example.docar.R;
-import com.example.docar.fragment.BookingFragment;
-import com.example.docar.fragment.HistoryFragment;
+import com.example.docar.fragment.ChatFragment;
+import com.example.docar.fragment.ExploreFragment;
+import com.example.docar.fragment.FriendFragment;
 import com.example.docar.fragment.HomeFragment;
 
+/**
+ * Created by Ujang Wahyu on 18/08/2016.
+ */
 
 public class MyAdapter extends FragmentPagerAdapter {
     private Context mContext;
-    private String[] titles ={"A","B","C"};
-    int[] icon = new int[]{R.drawable.ic_home_white_24dp,R.drawable.ic_explore_white_24dp,R.drawable.ic_chat_white_24dp};
+    private String[] titles ={"A","B","C","D"};
+    int[] icon = new int[]{R.drawable.ic_home_white_24dp,R.drawable.ic_explore_white_24dp,R.drawable.ic_chat_white_24dp,R.drawable.ic_person_white_24dp};
     private int heightIcon;
 
     public MyAdapter(FragmentManager fm, Context c){
@@ -36,9 +45,11 @@ public class MyAdapter extends FragmentPagerAdapter {
         if(position ==0){
             frag = new HomeFragment();
         }else if(position == 1){
-            frag = new BookingFragment();
+            frag = new ExploreFragment();
         }else if(position == 2){
-            frag = new HistoryFragment();
+            frag = new ChatFragment();
+        }else if(position == 3){
+            frag = new FriendFragment();
         }
 
         Bundle b = new Bundle();

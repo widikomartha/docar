@@ -1,12 +1,20 @@
 package com.example.docar;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.docar.Tab.MyAdapter;
+import com.example.docar.Tab.SlidingTabLayout;
+
+
 public class MainActivity extends AppCompatActivity {
+
+    private SlidingTabLayout mSlidingTabLayout;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        mViewPager=(ViewPager)findViewById(R.id.vp_tabs);
+        mViewPager.setAdapter(new MyAdapter(getSupportFragmentManager(), this));
+
+        mSlidingTabLayout=(SlidingTabLayout)findViewById(R.id.stl_tabs);
+        mSlidingTabLayout.setDistributeEvenly(true);
+        mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.colorAccent));
+        mSlidingTabLayout.setCustomTabView(R.layout.tab_view, R.id.tv_tab);
+        mSlidingTabLayout.setViewPager(mViewPager);
 
     }
 
@@ -40,5 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 
 }
