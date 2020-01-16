@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private void gridList(){
         arrayList=new ArrayList<>();
         arrayList.add(new MenuLayout("Car Only", R.drawable.car) );
-        arrayList.add(new MenuLayout("Car+Driver", R.drawable.car_driver) );
+        arrayList.add(new MenuLayout("Car + Driver", R.drawable.car_driver) );
         arrayList.add(new MenuLayout( "Airport Transfer", R.drawable.airport) );
 
     }

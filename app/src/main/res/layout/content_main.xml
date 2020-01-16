@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/content_main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-app:layout_behavior="@string/appbar_scrolling_view_behavior"
-tools:context="com.example.docar.MainActivity"
-tools:showIn="@layout/activity_main">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.docar.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#ECECEC">
 
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -26,66 +29,63 @@ tools:showIn="@layout/activity_main">
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/hallo"
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Hallo ,"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:layout_marginTop="-10dp"
+                    android:focusable="true"
+                    android:scrollbars="vertical"
+                    app:cardCornerRadius="12dp"
+                    app:contentPadding="6dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:text="Widi Komartha"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <android.support.v7.widget.SearchView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:background="#E6E6FA"
-                    app:iconifiedByDefault="true">
-
-                </android.support.v7.widget.SearchView>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical">
-
-                    <android.support.v7.widget.CardView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:focusable="true"
-                        android:scrollbars="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:contentPadding="6dp">
+                        android:orientation="vertical">
 
-                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                        <TextView
+                            android:id="@+id/hallo"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Hallo," />
 
-                            <android.support.v7.widget.RecyclerView
-                                android:id="@+id/recyclerview_grid"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-                        </RelativeLayout>
-                    </android.support.v7.widget.CardView>
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20dp"
+                            android:text="Widi Komartha"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        <android.support.v7.widget.SearchView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="#ECECEC"
+                            app:iconifiedByDefault="true"
+                            app:cardCornerRadius="12dp">
+
+                        </android.support.v7.widget.SearchView>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerview_grid"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/cardview3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:background="#000000">
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -103,12 +103,13 @@ tools:showIn="@layout/activity_main">
                             android:textColor="#000000"
                             android:textStyle="bold" />
 
-                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        <android.support.v7.widget.CardView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
                             android:id="@+id/cardview2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:background="#000000">
+                            >
 
                             <ImageView
                                 android:id="@+id/imageView1"

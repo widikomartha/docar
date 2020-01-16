@@ -35,8 +35,8 @@
     	                android:layout_height="wrap_content"
     	                android:textSize="14dp"
     	                android:text="Mango"
-    	                android:layout_gravity="center"
-    	                android:textColor="@android:color/black" />
+						android:textAlignment="center"
+						android:textColor="@android:color/black" />
 
     	        </LinearLayout>
 
