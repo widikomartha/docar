@@ -75,8 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                             String status = json.getString("message");
 
 
-                            Toast.makeText(getApplicationContext(), " Mesage : "+status, Toast.LENGTH_LONG).show();
-                            if(status.equals("success")){
+                            Toast.makeText(getApplicationContext(), " Login : "+status, Toast.LENGTH_LONG).show();
+                            if(status.equals("Success")){
 
                                 // Jika Login Sukses Maka pindah ke activity lain.
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);

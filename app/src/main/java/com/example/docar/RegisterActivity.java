@@ -26,8 +26,8 @@ import java.util.Map;
 public class RegisterActivity extends AppCompatActivity {
 
     String URL_DATA = "http://192.168.43.87/docar/register.php";
-    String tempUsername, tempEmail, tempPass, temptNoTelp, temptNIK;
-    EditText username,email,password, repassword, no_telp,  nik;
+    String tempUsername, tempEmail, tempPass, temptNoTelp;
+    EditText username,email,password, repassword, no_telp;
     //RadioButton JKL, JKP;
 
     @Override
@@ -41,9 +41,6 @@ public class RegisterActivity extends AppCompatActivity {
         repassword = (EditText) findViewById(R.id.repassword);
         email = (EditText) findViewById(R.id.email);
         no_telp = (EditText) findViewById(R.id.phone);
-        /*JKL = (RadioButton) findViewById(R.id.jkl);
-        JKP = (RadioButton) findViewById(R.id.jkp);*/
-        nik = (EditText) findViewById(R.id.nik);
         ////////////////
 
         TextView txt_register = (TextView) findViewById(R.id.txt_login);
@@ -63,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
-                InsertData(tempUsername, tempEmail, tempPass, temptNoTelp, temptNIK);
+                InsertData(tempUsername, tempEmail, tempPass, temptNoTelp);
 
                 /*Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);*/
@@ -78,12 +75,11 @@ public class RegisterActivity extends AppCompatActivity {
         tempPass=password.getText().toString();
         tempEmail=email.getText().toString();
         temptNoTelp=no_telp.getText().toString();
-        temptNIK=nik.getText().toString();
     }
 
 
     public void InsertData(final String sUsername, final String sEmail, final String sPass, final String
-            sNotelp, final String sNik )
+            sNotelp)
     {
 
         Toast.makeText(getBaseContext(),"Klik Register",Toast.LENGTH_SHORT).show();
@@ -114,7 +110,6 @@ public class RegisterActivity extends AppCompatActivity {
                 params.put("email",sEmail);
                 params.put("password",sPass);
                 params.put("no_tlp",sNotelp);
-                params.put("nik",sNik);
 
                 return params;
             }

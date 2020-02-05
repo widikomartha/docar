@@ -9,5 +9,8 @@
     <string name="Open">NabBar</string>
     <string name="Close">NabBar</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 
 </resources>
