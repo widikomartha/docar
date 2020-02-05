@@ -25,9 +25,9 @@ import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    String URL_DATA = "http://192.168.43.87/docar/register.php";
-    String tempUsername, tempEmail, tempPass, temptNoTelp;
-    EditText username,email,password, repassword, no_telp;
+    String URL_DATA = "http://192.168.1.6/docar/register.php";
+    String tempName, tempEmail, tempPass, temptNoTlp;
+    EditText name,email,password, repassword, no_tlp;
     //RadioButton JKL, JKP;
 
     @Override
@@ -36,11 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         ////////////////
-        username = (EditText) findViewById(R.id.name);
+        name = (EditText) findViewById(R.id.name);
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.repassword);
         email = (EditText) findViewById(R.id.email);
-        no_telp = (EditText) findViewById(R.id.phone);
+        no_tlp = (EditText) findViewById(R.id.phone);
         ////////////////
 
         TextView txt_register = (TextView) findViewById(R.id.txt_login);
@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
-                InsertData(tempUsername, tempEmail, tempPass, temptNoTelp);
+                InsertData(tempName, tempEmail, tempPass, temptNoTlp);
 
                 /*Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);*/
@@ -71,15 +71,15 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void getData()
     {
-        tempUsername=username.getText().toString();
+        tempName=name.getText().toString();
         tempPass=password.getText().toString();
         tempEmail=email.getText().toString();
-        temptNoTelp=no_telp.getText().toString();
+        temptNoTlp = no_tlp.getText().toString();
     }
 
 
-    public void InsertData(final String sUsername, final String sEmail, final String sPass, final String
-            sNotelp)
+    public void InsertData(final String sName, final String sEmail, final String sPass, final String
+            sNotlp)
     {
 
         Toast.makeText(getBaseContext(),"Klik Register",Toast.LENGTH_SHORT).show();
@@ -106,10 +106,10 @@ public class RegisterActivity extends AppCompatActivity {
             protected Map<String,String> getParams()
             {
                 Map<String,String> params = new HashMap<>();
-                params.put("username",sUsername);
+                params.put("name",sName);
                 params.put("email",sEmail);
                 params.put("password",sPass);
-                params.put("no_tlp",sNotelp);
+                params.put("no_tlp",sNotlp);
 
                 return params;
             }

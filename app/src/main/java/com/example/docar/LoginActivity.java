@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     Button signin,signup;
     EditText email,password;
 
-    String URL_DATA = "http://192.168.43.87/docar/login.php";
+    String URL_DATA = "http://192.168.1.6/docar/login.php";
 
 
     @Override
@@ -75,8 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                             String status = json.getString("message");
 
 
-                            Toast.makeText(getApplicationContext(), " Login : "+status, Toast.LENGTH_LONG).show();
-                            if(status.equals("Success")){
+                            Toast.makeText(getApplicationContext(), " Mesage : "+status, Toast.LENGTH_LONG).show();
+                            if(status.equals("success")){
 
                                 // Jika Login Sukses Maka pindah ke activity lain.
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);

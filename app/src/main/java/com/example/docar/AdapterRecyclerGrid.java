@@ -56,13 +56,14 @@ public class AdapterRecyclerGrid extends RecyclerView.Adapter<AdapterRecyclerGri
 						switch (getAdapterPosition()){
 							case 0 :
 								Toast.makeText(itemView.getContext(),"You have selected :"+getAdapterPosition(), Toast.LENGTH_SHORT).show();
+
 								break;
 							case 1 :
 
 								break;
 							case 2 :
 								break;
-						
+
 						}
 						context.startActivity(intent);					}
 	            });

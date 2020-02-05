@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/airport"/>
+    <TextView
+        android:id="@+id/textTipe"
+        android:text="Tipe"
+        android:layout_marginLeft="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/textMerek"
+        android:layout_below="@id/textTipe"
+        android:text="Merek"
+        android:layout_marginLeft="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"/>
+    <TextView
+        android:id="@+id/textHarga"
+        android:layout_below="@id/textMerek"
+        android:text="Harga"
+        android:layout_marginLeft="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="9dp"/>
+
+</RelativeLayout>
