@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    String URL_DATA = "http://192.168.1.6/docar/register.php";
+    String URL_DATA = "http://192.168.43.87/docar/register.php";
     String tempName, tempEmail, tempPass, temptNoTlp;
     EditText name,email,password, repassword, no_tlp;
     //RadioButton JKL, JKP;

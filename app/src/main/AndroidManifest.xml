@@ -30,6 +30,9 @@
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailCar"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

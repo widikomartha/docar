@@ -52,7 +52,7 @@ public class ListViewArrayAdapter extends ArrayAdapter<SetValue_Car> {
         Glide.with(context).load(setValue_car.getFoto()).into(foto);
         tipe.setText(setValue_car.getTipe());
         merek.setText(setValue_car.getMerek());
-        harga.setText(setValue_car.getHarga());
+        harga.setText("Rp " + formatter.format(setValue_car.getHarga()));
 
         return v;
     }

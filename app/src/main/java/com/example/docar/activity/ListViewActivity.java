@@ -13,6 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.docar.DetailCar;
 import com.example.docar.R;
 import com.example.docar.listview.ListViewArrayAdapter;
 import com.example.docar.model.SetValue_Car;
@@ -27,7 +28,7 @@ import java.util.List;
 
 public class ListViewActivity extends AppCompatActivity{
 
-    private static  final String URL_DATA = "http://192.168.1.6/docar/cars.php";
+    private static  final String URL_DATA = "http://192.168.43.87/docar/cars.php";
     private ListView listTotal;
     private ListViewArrayAdapter ListViewArrayAdapter;
     private List<SetValue_Car> setValue_carList;
@@ -70,9 +71,9 @@ public class ListViewActivity extends AppCompatActivity{
                                 carObject.getString("id"),
                                 carObject.getString("tipe"),
                                 carObject.getString("merek"),
-                                carObject.getString("harga"),
-                                carObject.getString("tahun"),
                                 carObject.getString("plate"),
+                                carObject.getString("tahun"),
+                                carObject.getInt("harga"),
                                 carObject.getString("foto")
 
                         );
@@ -105,6 +106,30 @@ public class ListViewActivity extends AppCompatActivity{
 
 //        showList();
 
+        listTotal = (ListView) findViewById(R.id.list_view);
+
         loadCar();
+
+        listTotal.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Toast.makeText(getApplicationContext(),
+                //     setValueArtikelAwalList.get(position).getTitle(), Toast.LENGTH_SHORT).show();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("tipe", setValue_carList.get(position).getTipe().toString());
+                bundle.putString("merek", setValue_carList.get(position).getMerek().toString());
+                bundle.putString("plate", setValue_carList.get(position).getPlate().toString());
+                bundle.putString("tahun", setValue_carList.get(position).getTahun().toString());
+                bundle.putInt("harga", setValue_carList.get(position).getHarga());
+                bundle.putString("foto", setValue_carList.get(position).getFoto().toString());
+
+                Intent intent = new Intent(ListViewActivity.this, DetailCar.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }

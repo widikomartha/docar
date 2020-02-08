@@ -2,9 +2,10 @@ package com.example.docar.model;
 
 public class SetValue_Car {
 
-    private String id, tipe, merek, plate, tahun, harga, foto;
+    private String id, tipe, merek, plate, tahun, foto;
+    private int harga;
 
-    public SetValue_Car(String id, String tipe, String merek, String plate, String tahun, String harga, String foto){
+    public SetValue_Car(String id, String tipe, String merek, String plate, String tahun, int harga, String foto){
         this.id = id;
         this.tipe = tipe;
         this.merek = merek;
@@ -30,7 +31,7 @@ public class SetValue_Car {
 
     public String getTahun() { return tahun; }
 
-    public String getHarga() {
+    public int getHarga() {
         return harga;
     }
 

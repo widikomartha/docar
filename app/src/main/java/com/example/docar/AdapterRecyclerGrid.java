@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.docar.activity.ListViewActivity;
+
 import java.util.ArrayList;
 
 public class AdapterRecyclerGrid extends RecyclerView.Adapter<AdapterRecyclerGrid.MyHolder> {
@@ -56,7 +58,7 @@ public class AdapterRecyclerGrid extends RecyclerView.Adapter<AdapterRecyclerGri
 						switch (getAdapterPosition()){
 							case 0 :
 								Toast.makeText(itemView.getContext(),"You have selected :"+getAdapterPosition(), Toast.LENGTH_SHORT).show();
-
+								intent = new Intent(context, ListViewActivity.class);
 								break;
 							case 1 :
 
