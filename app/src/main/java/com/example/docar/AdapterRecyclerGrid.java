@@ -57,7 +57,7 @@ public class AdapterRecyclerGrid extends RecyclerView.Adapter<AdapterRecyclerGri
 						Toast.makeText(c,"Hello Bro Selamat Datang",Toast.LENGTH_SHORT);
 						switch (getAdapterPosition()){
 							case 0 :
-								Toast.makeText(itemView.getContext(),"You have selected :"+getAdapterPosition(), Toast.LENGTH_SHORT).show();
+//								Toast.makeText(itemView.getContext(),"You have selected :"+getAdapterPosition(), Toast.LENGTH_SHORT).show();
 								intent = new Intent(context, ListViewActivity.class);
 								break;
 							case 1 :

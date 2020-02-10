@@ -18,7 +18,6 @@ import com.example.docar.R;
 import com.example.docar.listview.ListViewArrayAdapter;
 import com.example.docar.model.SetValue_Car;
 
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,7 +27,7 @@ import java.util.List;
 
 public class ListViewActivity extends AppCompatActivity{
 
-    private static  final String URL_DATA = "http://192.168.43.87/docar/cars.php";
+    private static  final String URL_DATA = "http://192.168.1.9/docar/cars.php";
     private ListView listTotal;
     private ListViewArrayAdapter ListViewArrayAdapter;
     private List<SetValue_Car> setValue_carList;
@@ -52,18 +51,19 @@ public class ListViewActivity extends AppCompatActivity{
 //        });
 //    }
 
+
     private void loadCar() {
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_DATA, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(getApplicationContext(), "onResponse", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "onResponse", Toast.LENGTH_LONG).show();
                 try {
                     setValue_carList = new ArrayList<>();
                     JSONObject obj = new JSONObject(response);
                     JSONArray galang_danaArray = obj.getJSONArray("data");
 
-                    Toast.makeText(getApplicationContext(),"datas",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"datas",Toast.LENGTH_SHORT).show();
 
                     for (int i = 0; i < galang_danaArray.length(); i++) {
                         JSONObject carObject = galang_danaArray.getJSONObject(i);
@@ -103,7 +103,6 @@ public class ListViewActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_view);
-
 //        showList();
 
         listTotal = (ListView) findViewById(R.id.list_view);
@@ -129,7 +128,9 @@ public class ListViewActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
     }
+
 
 
 }

@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    String URL_DATA = "http://192.168.43.87/docar/register.php";
+    String URL_DATA = "http://192.168.1.9/docar/register.php";
     String tempName, tempEmail, tempPass, temptNoTlp;
     EditText name,email,password, repassword, no_tlp;
     //RadioButton JKL, JKP;
@@ -48,7 +48,6 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
@@ -64,6 +63,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 /*Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);*/
+                /*Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);*/
             }
         });
     }
@@ -78,11 +79,8 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
-    public void InsertData(final String sName, final String sEmail, final String sPass, final String
-            sNotlp)
+    public void InsertData(final String sName, final String sEmail, final String sPass, final String sNotlp)
     {
-
-        Toast.makeText(getBaseContext(),"Klik Register",Toast.LENGTH_SHORT).show();
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL_DATA,
                 new Response.Listener<String>() {
                     @Override
@@ -90,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonObject= new JSONObject(response);
                             String jsnMsg = jsonObject.getString("message");
-                            Toast.makeText(getBaseContext(),"Save Data"+" "+jsnMsg,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext()," "+jsnMsg,Toast.LENGTH_SHORT).show();
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

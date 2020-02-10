@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:src="@drawable/airport"/>
-    <TextView
-        android:id="@+id/textTipe"
-        android:text="Tipe"
-        android:layout_marginLeft="75dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/textMerek"
-        android:layout_below="@id/textTipe"
-        android:text="Merek"
-        android:layout_marginLeft="75dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="9dp"/>
-    <TextView
-        android:id="@+id/textHarga"
-        android:layout_below="@id/textMerek"
-        android:text="Harga"
-        android:layout_marginLeft="75dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="9dp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/airport"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTipe"
+                android:text="Tipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:id="@+id/textMerek"
+                android:layout_below="@id/textTipe"
+                android:text="Merek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"/>
+            <TextView
+                android:id="@+id/textHarga"
+                android:layout_below="@id/textMerek"
+                android:text="Harga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>
